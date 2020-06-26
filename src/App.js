@@ -19,6 +19,3 @@ export default App;
 
 
 
-
-// send post request to firebase
-// axios.post('/orders.json') - /orders.json is end-point to create mongodb like structures in firebase.

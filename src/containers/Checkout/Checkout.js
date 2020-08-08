@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';    // Nested Route
 
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
+import ContactData from './ContactData/ContactData';
 
 class Checkout extends Component {
     state = {
@@ -31,11 +33,11 @@ class Checkout extends Component {
     }
 
     render () {
-
-
         return (
             <div>
                 <CheckoutSummary ingredients={this.state.ingredients} onCheckoutCancelled={this.checkoutCancelledHandler} onCheckoutContinued={this.checkoutContinuedHandler}  />
+
+                <Route path={this.props.match.path + '/contact-data'} component={ContactData} />
             </div>
         )
     }

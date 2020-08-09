@@ -13,7 +13,7 @@ const input = (props) => {
             break;
         case ('select'):
         inputElement = (
-            <select className={classes.InputElement} value={props.value} onChange={props.changed}>
+            <select className={classes.InputElement} value={props.value} onChange={props.changed}> 
                 {props.elementConfig.options.map(opt => (
                     <option key={opt.value} value={opt.value}>
                         {opt.displayValue}
